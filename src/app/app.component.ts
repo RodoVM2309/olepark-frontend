@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderNavComponent } from './shared/components/header-nav/header-nav.component';
 import { ParkingComponent } from "./shared/components/parking/parking.component";
 import { FindParkingComponent } from './shared/components/find-parking/find-parking.component';
+import { TestimonialsComponent } from './shared/components/testimonials/testimonials.component';
 
 
 @Component({
@@ -12,7 +13,8 @@ import { FindParkingComponent } from './shared/components/find-parking/find-park
     RouterOutlet,
     HeaderNavComponent,
     ParkingComponent,
-    FindParkingComponent
+    FindParkingComponent,
+    TestimonialsComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

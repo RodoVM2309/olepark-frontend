@@ -1,0 +1,33 @@
+<section class="testimonials">
+    <h2>¿Qué dicen nuestros usuarios?</h2>
+    <div class="cards-container">
+      <mat-card class="testimonial-card" *ngFor="let testimonial of testimonials">
+        <div class="card-header">
+          <img [src]="testimonial.image" alt="Foto de perfil" class="profile-pic">
+          <div class="user-info">
+            <h3>{{ testimonial.name }}</h3>
+            <div class="rating">
+              <mat-icon *ngFor="let star of [].constructor(5); let i = index"
+                        [ngClass]="{'filled': i < testimonial.rating}">
+                star
+              </mat-icon>
+            </div>
+          </div>
+        </div>
+        <p class="testimonial-text">{{ testimonial.text }}</p> 
+        <span class="quote-mark">”</span> 
+      </mat-card>
+    </div>
+</section>
+
+<div class="contact-section">
+    <div class="text-section">
+      <h2>¿Quieres hablar?</h2>
+      <button class="publish-btn">Contacta con nosotros</button>
+    </div>
+    <div class="image-section">
+      <img src="assets/img/img-4.png" alt="Plaza de garaje">
+    </div>
+</div>
+
+
