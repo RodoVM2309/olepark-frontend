@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-faq',
   standalone: true,
-  imports: [],
+  imports: [
+    MatIconModule
+  ],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.scss'
 })

@@ -2,13 +2,13 @@ body, html {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  width: 100vw; 
+  width: 100vw;
 }
 
 .parking-container, .content, .form-wrapper, .form-card {
-  max-width: 100%; 
-  overflow: hidden; 
-  box-sizing: border-box; 
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .parking-container {
@@ -17,12 +17,12 @@ body, html {
   align-items: center;
   text-align: center;
   padding: 40px;
-  width: 100%; 
+  width: 100%;
 }
 
 .content {
-  width: 98%; 
-  max-width: 1400px; 
+  width: 98%;
+  max-width: 1400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,56 +31,54 @@ body, html {
 
 .text-section {
   flex: 1;
-  max-width: 620px; 
+  max-width: 620px;
   text-align: left;
-  margin-top: -40px; 
-}
+  margin-top: -40px;
 
-.text-section h1 {
-  font-size: 4.5rem; 
-  font-weight: bold;
-  margin-bottom: 15px;
-  letter-spacing: 2.7px;
-}
+  h1 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 2.7px;
+  }
 
-.text-section p {
-  font-size: 1.4rem; 
-  line-height: 1.6;
-  color: #222; 
-  font-weight: 500;
+  p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #222;
+    font-weight: 500;
+  }
 }
-
 
 .image-section {
   flex: 1;
   position: relative;
   width: 400px;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: -40px;
-}
 
-.car-background {
-  width: 100%;
-  opacity: 0.6;
-  position: relative;
-}
+  .car-background {
+    width: 100%;
+    opacity: 0.6;
+    position: relative;
+  }
 
-.car-front {
-  position: absolute;
-  width: 90%;
-  top: 0;
-  left: 0;
+  .car-front {
+    position: absolute;
+    width: 90%;
+    top: 0;
+    left: 0;
+  }
 }
 
 .form-wrapper {
-  width: 100%; 
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -101px; 
+  margin-top: -101px;
 }
 
 .form-card {
@@ -92,168 +90,187 @@ body, html {
   text-align: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   color: white;
+
+  .form-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .input-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    padding: 12px 16px;
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+
+    input {
+        border: none;
+        outline: none;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 10px 40px 10px 10px; /* Espacio a la derecha para el icono */
+        border-radius: 8px;
+        background: none;
+        height: 100%;
+    }
+
+    .material-symbols-outlined {
+        position: absolute;
+        right: 15px; /* Posiciona el icono dentro del input */
+        font-size: 24px;
+        color: gray;
+    }
 }
 
-.form-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
+  .radio-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 1.3rem;
+    width: 100%;
+    max-width: 400px;
+
+    input[type="radio"] {
+      transform: scale(1.5);
+      margin-right: 8px;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      font-size: 1.3rem;
+    }
+  }
+
+  .button-container {
+    width: 100%;
+    max-width: 428px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    button {
+      background-color: #3721E1;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      width: 100%;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1.3rem;
+      text-align: center;
+      height: 60px;
+    }
+  }
 }
 
-.input-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+@media screen and (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section {
+    max-width: 90%;
+    text-align: center;
+    margin-top: 0;
+
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+
+  .image-section {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .car-background,
+  .car-front {
+    width: 100%;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .input-group {
+    max-width: 100%;
+    height: 50px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-container {
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+    height: 50px;
+  }
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
-  font-size: 24px;
-  color: gray;
+@media screen and (max-width: 768px) {
+  .text-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-section p {
+    font-size: 1rem;
+  }
+
+  .image-section {
+    width: 100%;
+  }
+
+  .form-wrapper {
+    margin-top: -50px;
+  }
+
+  .form-card {
+    padding: 15px;
+  }
+
+  .input-group {
+    height: 45px;
+    padding: 10px;
+  }
+
+  .radio-group label {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+    height: 45px;
+  }
 }
-
-.icon-location {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none; 
-}
-
-.icon-date {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none; 
-}
-
-.input-group {
-  position: relative; 
-  display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 12px;
-  padding: 12px 16px;
-  width: 100%;
-  max-width: 400px;
-  height: 50px;
-}
-
-.input-group input {
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 1.2rem;
-  padding: 10px;
-  padding-right: 40px; 
-  border-radius: 8px;
-  background: none;
-  height: 100%;
-}
-
-.placeholder-label {
-  position: absolute;
-  font-size: 1.2rem;
-  color: gray;
-  margin-left: 16px;
-  margin-top: -30px;
-}
-
-/* Iconos alineados */
-.icon {
-  font-size: 1.4rem;
-  color: gray;
-  display: flex;
-  align-items: center;
-}
-
-.info-text {
-  font-size: 1.3rem;
-  margin-top: 35px;
-  color: white;
-  text-align: left; 
-  width: 100%;
-  max-width: 400px;
-  white-space: normal;
-}
-
-input-group {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: white;
-  border-radius: 12px;
-  padding: 16px 20px; 
-  width: 100%;
-  max-width: 400px;
-  height: 60px; 
-}
-
-.input-group input {
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 1.3rem; 
-  padding: 12px; 
-  border-radius: 8px;
-  background: none;
-  height: 100%;
-}
-
-.radio-group {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  margin-top: 10px;
-  font-size: 1.3rem; 
-  width: 100%;
-  max-width: 400px;
-}
-
-.radio-group input[type="radio"] {
-  transform: scale(1.5);
-  margin-right: 8px; 
-}
-
-
-.radio-group label {
-  display: flex;
-  align-items: center;
-  font-size: 1.3rem; 
-}
-
-
-.button-container {
-  width: 100%;
-  max-width: 428px; 
-  margin-top: 20px; 
-  display: flex;
-  justify-content: center; 
-}
-
-button {
-  background-color: #3721E1;
-  color: white;
-  border: none;
-  padding: 12px 16px;
-  width: 100%; 
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 1.3rem;
-  text-align: center;
-  height: 60px; 
-}
-
-
-
-
-
