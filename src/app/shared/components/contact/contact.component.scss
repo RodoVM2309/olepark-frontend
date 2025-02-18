@@ -1,3 +1,4 @@
+
 .contact-section {
     display: flex;
     justify-content: center;
@@ -44,6 +45,10 @@
     font-size: 3.2rem;
     font-weight: bold;
     margin-bottom: 20px;
+
+    @media (max-width: 1024px) {
+        font-size: 2.5rem;  // Cambio el tamaño de fuente a 2.5rem en vista móvil
+    }
 }
 
 .publish-btn {
@@ -59,7 +64,9 @@
     height: 60px;
 
     @media (max-width: 1024px) {
-        width: 80%;
+        width: 100%;   // Asegura que el botón ocupe todo el ancho disponible
+        max-width: 400px;  // Limita el ancho máximo para no hacerlo demasiado grande
+        margin: 10px auto;  // Centra el botón en la vista móvil
     }
 }
 
@@ -104,15 +111,23 @@
 }
 
 .text-container h2 {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
+
+    @media (max-width: 1024px) {
+        font-size: 2.5rem;  // Se asegura de que el tamaño sea consistente en dispositivos pequeños
+    }
 }
 
 .text-container p {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 30px;
+
+    @media (max-width: 1024px) {
+        font-size: 1.1rem;  // Ajuste del tamaño de fuente del párrafo para dispositivos pequeños
+    }
 }
 
 .why-btn {
