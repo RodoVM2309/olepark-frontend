@@ -67,14 +67,14 @@ button[mat-icon-button] {
   background-color: white;
   border: none;
   padding: 0;
-  overflow: visible; /* 🔹 Evita que el contenido se corte */
+  overflow: visible; 
 }
 
 
 button[mat-icon-button] mat-icon {
   font-size: 30px;
   color: #3721E1 !important;
-  line-height: 1; /* 🔹 Ajusta la alineación vertical */
+  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;

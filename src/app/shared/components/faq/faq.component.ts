@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
+import { MaterialModule } from '../../modules/material.module';
 
 @Component({
   selector: 'app-faq',
   standalone: true,
   imports: [
-    MatIconModule
+    MaterialModule
   ],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.scss'
