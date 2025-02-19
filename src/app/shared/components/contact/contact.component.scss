@@ -1,4 +1,3 @@
-
 .contact-section {
     display: flex;
     justify-content: center;
@@ -7,6 +6,8 @@
     margin-bottom: 30px;
     text-align: left;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 
     @media (max-width: 1024px) {
         flex-direction: column;
@@ -18,22 +19,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1; // Ajuste para que ocupe el mismo espacio que el texto
+    max-width: 500px;
 
     img {
         width: 100%;
-        max-width: 700px;
+        max-width: 400px; // Limita el tamaño de la imagen
         border-radius: 12px;
 
         @media (max-width: 1024px) {
             max-width: 90%;
-            margin-right: 0;
         }
     }
 }
 
 .text-section {
+    flex: 1; // Asegura que el texto tenga la misma proporción que la imagen
     max-width: 500px;
-    flex: 1;
+    text-align: left;
 
     @media (max-width: 1024px) {
         max-width: 90%;
@@ -42,12 +45,12 @@
 }
 
 .text-section h2 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     font-weight: bold;
     margin-bottom: 20px;
 
     @media (max-width: 1024px) {
-        font-size: 2.5rem;  // Cambio el tamaño de fuente a 2.5rem en vista móvil
+        font-size: 2.5rem;
     }
 }
 
@@ -56,17 +59,17 @@
     color: white;
     border: none;
     padding: 12px 16px;
-    width: 55%;
+    width: 60%;
     border-radius: 12px;
     cursor: pointer;
     font-size: 1.3rem;
     text-align: center;
-    height: 60px;
+    height: 55px;
 
     @media (max-width: 1024px) {
-        width: 100%;   // Asegura que el botón ocupe todo el ancho disponible
-        max-width: 400px;  // Limita el ancho máximo para no hacerlo demasiado grande
-        margin: 10px auto;  // Centra el botón en la vista móvil
+        width: 100%;
+        max-width: 400px;
+        margin: 10px auto;
     }
 }
 
@@ -78,6 +81,9 @@
     padding: 60px;
     background-color: #3721E1;
     color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 25px;
 
     @media (max-width: 1024px) {
         flex-direction: column;
@@ -89,10 +95,13 @@
 .image-container {
     display: flex;
     justify-content: center;
+    flex: 1;
+    max-width: 500px; // Limita el tamaño de la imagen
 
     img {
-        max-width: 85%;
+        max-width: 100%;
         height: auto;
+        border-radius: 12px;
 
         @media (max-width: 1024px) {
             max-width: 90%;
@@ -101,8 +110,8 @@
 }
 
 .text-container {
-    max-width: 500px;
     flex: 1;
+    max-width: 500px;
 
     @media (max-width: 1024px) {
         max-width: 90%;
@@ -114,10 +123,6 @@
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
-
-    @media (max-width: 1024px) {
-        font-size: 2.5rem;  // Se asegura de que el tamaño sea consistente en dispositivos pequeños
-    }
 }
 
 .text-container p {
@@ -126,7 +131,7 @@
     margin-bottom: 30px;
 
     @media (max-width: 1024px) {
-        font-size: 1.1rem;  // Ajuste del tamaño de fuente del párrafo para dispositivos pequeños
+        font-size: 1.1rem;
     }
 }
 

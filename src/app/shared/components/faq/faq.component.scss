@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; // Evita el scroll horizontal
+}
+
 .faq-section {
   display: flex;
   justify-content: center;
@@ -5,6 +16,9 @@
   gap: 100px;
   padding: 60px;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; // Centra la sección
 
   @media (max-width: 1024px) {
     gap: 50px;
@@ -13,37 +27,35 @@
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
-    // text-align: left;  
     gap: 30px;
     padding: 30px;
-    width: 100%;  
+    width: 100%;
   }
 }
 
 .image-container {
   display: flex;
   justify-content: center;
+  width: 100%;
+  max-width: 500px; // Limita el ancho de la imagen
 
   img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     border-radius: 12px;
-
-    @media (max-width: 768px) {
-      max-width: 100%;
-    }
   }
 }
 
 .faq-text {
   max-width: 500px;
+  text-align: center; // Centra el texto
 
   h2 {
     font-size: 3.2rem;
     color: #333;
     font-weight: bold;
     margin-bottom: 20px;
-
+    
     @media (max-width: 768px) {
       font-size: 2.5rem;
     }
@@ -56,7 +68,10 @@
   padding: 15px;
   position: relative; 
   cursor: pointer;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 500px; // Mantiene el tamaño adecuado en móviles
+  text-align: left;
 
   .summary {
     display: flex;
@@ -115,7 +130,6 @@
     line-height: 1.6;
   }
 
-  /* Cuando se abre la pregunta */
   &[open] {
     .summary {
       .expand-icon {
@@ -140,12 +154,66 @@ details > summary:first-of-type {
 
 /* Iconos */
 .mat-icon {
-  -webkit-user-select: none;
-  user-select: none;
-  background-repeat: no-repeat;
-  display: inline-block;
-  fill: currentColor;
-  height: 24px;
-  width: 24px;
-  overflow: hidden;
+  width: 24px; 
+  height: 24px; 
+  font-size: 24px; // Tamaño estándar
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+/* Expandir y colapsar iconos */
+.expand-icon, .collapse-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; // Tamaño uniforme
+  height: 32px;
+  font-size: 20px; // Ajuste para evitar distorsión
+  border-radius: 50%;
+}
+
+.expand-icon {
+  background-color: #BDBCBC;
+  color: #3821E3;
+}
+
+.collapse-icon {
+  display: none;
+  background-color: #55B8DC;
+  color: #3821E3;
+}
+
+/* Cuando se abre la pregunta */
+.question[open] {
+  .expand-icon {
+    display: none;
+  }
+  .collapse-icon {
+    display: flex;
+  }
+}
+
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 22px;
+    gap: 20px;
+  }
+
+  .faq-text h2 {
+    font-size: 2rem;
+  }
+
+  .question {
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .answer {
+    font-size: 1rem;
+  }
 }
